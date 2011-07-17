@@ -1,0 +1,35 @@
+<div id="masthead">
+	
+	<div class="content_pad">
+		
+		<h1 class=""><%= @item.name %></h1>
+		
+		<div id="bread_crumbs">
+			<a href="../dashboard.html">Home</a> / 
+			<a href="<%= items_path %>">Items</a> / 
+			<a href="javascript:;" class="current_page"><%= @item.name %></a>				
+		 </div> <!-- #bread_crumbs -->
+		
+		<div id="search">
+			<form action="/search" method="get">
+				<input type="text" value="" placeholder="Search" name="search" id="search_input" title="Search" />					
+				<input type="submit" value="" name="submit" class="submit" />					
+			</form>
+		</div> <!-- #search -->
+		
+	</div> <!-- .content_pad -->
+	
+</div> <!-- #masthead -->	
+
+<div id="content" class="xgrid">
+	
+	<div class="x12">
+		<h1><%= @item.name %></h1>
+		Nothing here yet.
+	</div> <!-- .x12 -->
+	
+</div> <!-- #content -->
+
+<% content_for :page_script do %>
+	$(".uniform").uniform();
+<% end %>

@@ -1,0 +1,22 @@
+<div id="login">
+	<h1>Dashboard</h1>
+	<div id="login_panel">
+		<%= form_tag session_path do %>
+			<div class="login_fields">
+				<div class="field">
+					<label for="email">Username</label>
+					<input type="text" name="login" value="" id="email" tabindex="1" placeholder="username" />		
+				</div>
+				
+				<div class="field">
+					<label for="password">Password</label>
+					<input type="password" name="password" value="" id="password" tabindex="2" placeholder="password" />			
+				</div>
+			</div> <!-- .login_fields -->
+			
+			<div class="login_actions">
+				<button type="submit" class="btn btn-orange" tabindex="3">Login</button>
+			</div>
+		<% end %>
+	</div> <!-- #login_panel -->		
+</div> <!-- #login -->

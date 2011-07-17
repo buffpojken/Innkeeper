@@ -1,0 +1,39 @@
+
+<div class="field"><label for="fname">Name </label>
+	<%= text_field :item, :name, {:size => 50, :class => "medium"}%>
+	<p class="field_help">
+		EC-Radio Chip
+	</p>
+	</div>
+
+<div class="field"><label for="description">Description</label> 
+	<%= text_area :item, :description, {:rows => 7, :cols => 50}%>
+	<p class="field_help">
+		EC-Radio Chip, mounted on Arduino Duo								
+	</p>
+</div>
+
+<div class="field"><label for="fname">Code </label>
+	<%= text_field :item, :code, {:size => 50, :class => "medium"}%>
+	<p class="field_help">
+		1223-4331-3322<br />
+		<span style="color:red">
+			Make sure this code is a valid barcode, otherwise - you'll get weird results.<br /> Click 
+			<a href="#">here</a> to generate a barcode on the fly!
+		</span>
+	</p>
+	</div>
+
+
+<div class="field">
+	<label for="type">Type </label>
+	<select id="type" class="medium" name="item[category_id]">
+		<optgroup label="Category">
+			<%= options_from_collection_for_select(@categories, 'id', 'name', @item.category_id )%>
+		</optgroup>
+	</select>
+	<p class="field_help">Electronics, tactictal</p>
+</div>
+
+
+
