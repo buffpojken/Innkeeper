@@ -1,5 +1,0 @@
-class PublicController < ApplicationController
-
-
-
-end

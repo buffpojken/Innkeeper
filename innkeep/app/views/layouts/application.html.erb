@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+ 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+ 
+<head> 
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" /> 
+	<title>Innkeeper</title> 
+	
+<%= stylesheet_link_tag 'application'%>
+
+</head> 
+ 
+<body> 
+
+<div id="wrapper">
+	
+	<div id="top">
+		
+		<div class="content_pad">			
+			<ul class="right">
+				<li><a href="javascript:;" class="top_icon"><span class="ui-icon ui-icon-person"></span>Logged in as <%= @current_user.login %></a></li>
+				<li><a href="<%= logout_path %>">Logout</a></li>
+			</ul>
+		</div> <!-- .content_pad -->
+		
+	</div> <!-- #top -->	
+	
+	<div id="header">
+		
+		<div class="content_pad">
+			<h1>Innkeeper</h1>
+			
+			<ul id="nav">
+				<li class="nav_icon nav_current"><a href="<%= items_path %>"><span class="ui-icon ui-icon-home"></span>Items</a></li>
+			</ul>
+		</div> <!-- .content_pad -->
+		
+	</div> <!-- #header -->	
+	
+	<%= yield %>
+
+	<div id="footer">		
+		<div class="content_pad">			
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/se/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/2.5/se/80x15.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type">Innkeeper</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="innkeeper.sykewarrior.com" property="cc:attributionName" rel="cc:attributionURL">Daniel Sundström</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/se/">Creative Commons Attribution-NonCommercial-ShareAlike 2.5 Sweden License</a>.<br />Permissions beyond the scope of this license may be available at <a xmlns:cc="http://creativecommons.org/ns#" href="rights.sykewarrior.com" rel="cc:morePermissions">rights.sykewarrior.com</a>.
+		</div> <!-- .content_pad -->
+	</div> <!-- #footer -->		
+	
+</div> <!-- #wrapper -->
+
+<%= javascript_include_tag 'application' %>
+<script>
+	<%= yield :page_script %>
+</script>
+
+</body> 
+ 
+</html>
